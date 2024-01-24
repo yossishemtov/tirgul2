@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class TestThreadCheckArray {
 	public static void main(String[] args) {
@@ -6,11 +8,11 @@ public class TestThreadCheckArray {
 			Thread thread1, thread2;
 			System.out.println("Enter array size");
 			int num  = input.nextInt();
-			int [] array = new int[num];
+			ArrayList<Integer> array = new ArrayList<>();
 			System.out.println("Enter numbers for array");
 			
 			for (int index = 0; index < num; index++) 
-				array[index] = input.nextInt();
+				array.add(input.nextInt());
 			
 			System.out.println("Enter number");
 			num = input.nextInt();
@@ -35,9 +37,9 @@ public class TestThreadCheckArray {
 				System.out.println("Sorry");
 				return;
 			}
-			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().length);
+			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().size());
 			System.out.print("I:    ");
-			for(int index = 0; index < sd.getArray().length ; index++)
+			for(int index = 0; index < sd.getArray().size() ; index++)
 				System.out.print(index + "    ");
 			System.out.println();
 			System.out.print("A:    ");
@@ -65,6 +67,12 @@ public class TestThreadCheckArray {
 				else
 					System.out.print("0    ");	
 			}
+			System.out.format("\nend time of Thread1: %d(nano seconds)\nend time of Thread2: %d(nano seconds)",sd.Thread1.getTime(),sd.Thread2.getTime());
+			if(sd.Thread1.getWinner())
+				System.out.println("\nWinner is: Thread1");
+			else if (sd.Thread2.getWinner())
+				System.out.println("\nWinner is: Thread2");
+				
 		}
 	}
 
