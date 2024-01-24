@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 
-public class TestThreadCheckArray {
+public class TestThreadCheckArray {//a
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
 			Thread thread1, thread2;

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 
 /**
- * @author emanuel
+ * @author emanuela
  *Connected info between two threads 
  */
 public class SharedData 

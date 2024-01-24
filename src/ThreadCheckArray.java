@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class ThreadCheckArray implements Runnable 
 {
-	private boolean flag;
+	private boolean flag;//a
 	private boolean [] winArray;
 	SharedData sd;
 	long startTime=0,dauration=0;
